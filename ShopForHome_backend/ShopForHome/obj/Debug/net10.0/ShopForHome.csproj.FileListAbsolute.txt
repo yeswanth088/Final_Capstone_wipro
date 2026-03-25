@@ -1113,3 +1113,4 @@ D:\Final_Capstone_shopforhome\shopforhome_backend\shopforhome\obj\Debug\net10.0\
 D:\Final_Capstone_shopforhome\shopforhome_backend\shopforhome\obj\Debug\net10.0\ShopForHome.pdb
 D:\Final_Capstone_shopforhome\shopforhome_backend\shopforhome\obj\Debug\net10.0\ShopForHome.genruntimeconfig.cache
 D:\Final_Capstone_shopforhome\shopforhome_backend\shopforhome\obj\Debug\net10.0\ref\ShopForHome.dll
+D:\Final_Capstone_shopforhome\shopforhome_backend\shopforhome\obj\Debug\net10.0\ShopForHome.sourcelink.json

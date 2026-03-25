@@ -51,13 +51,15 @@
                 <th class="ps-4 py-3 border-bottom text-dark fw-bold border-0">Product</th>
                 <th class="py-3 border-bottom text-dark fw-bold border-0">Category</th>
                 <th class="py-3 border-bottom text-dark fw-bold border-0">Price</th>
+                <th class="py-3 border-bottom text-dark fw-bold border-0">Quantity</th>
+                <th class="py-3 border-bottom text-dark fw-bold border-0">Stock</th>
                 <th class="py-3 border-bottom text-dark fw-bold border-0">Rating</th>
                 <th class="text-end pe-4 py-3 border-bottom text-dark fw-bold border-0">Actions</th>
               </tr>
             </thead>
             <tbody class="border-top-0">
               <tr *ngIf="products.length === 0">
-                <td colspan="5" class="text-center py-5 text-muted">No products found. Add some!</td>
+                <td colspan="7" class="text-center py-5 text-muted">No products found. Add some!</td>
               </tr>
               <tr *ngFor="let p of products">
                 <td class="ps-4 py-3">
@@ -72,6 +74,13 @@
                 </td>
                 <td class="py-3 text-secondary">{{p.category?.categoryName || 'Decor'}}</td>
                 <td class="py-3 text-dark fw-medium">₹{{p.price}}</td>
+                <td class="py-3 text-dark">{{p.quantity}}</td>
+                <td class="py-3">
+                  <span class="badge rounded-pill px-2 py-1 fw-normal" 
+                        [ngClass]="p.stock === 0 ? 'bg-success-subtle text-success border border-success' : 'bg-danger-subtle text-danger border border-danger'">
+                    {{ p.stock === 0 ? 'In Stock' : 'Out of Stock' }}
+                  </span>
+                </td>
                 <td class="py-3 text-dark">{{p.rating || '4.8'}}</td>
                 <td class="text-end pe-4 py-3">
                   <button class="btn btn-sm btn-link text-secondary text-decoration-none p-1 me-2" title="Edit" (click)="openEditModal(p)">
